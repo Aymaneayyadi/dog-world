@@ -197,73 +197,6 @@ ul, ol { margin: 0 0 1rem 1.5rem; }
 
 body.rtl .header-lang { margin-right: 0; margin-left: 12px; }
 
-/* Search */
-.header-search {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.search-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  color: var(--text);
-  transition: color .2s;
-}
-
-.search-toggle:hover { color: var(--secondary); }
-
-.search-toggle svg { width: 22px; height: 22px; }
-
-.search-form-header {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 320px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-lg);
-  padding: 16px;
-  z-index: 100;
-}
-
-.search-form-header.active { display: block; }
-
-.search-form {
-  display: flex;
-  gap: 8px;
-}
-
-.search-form input[type="search"] {
-  flex: 1;
-  padding: 10px 16px;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: .9rem;
-  outline: none;
-  transition: border-color .2s;
-}
-
-.search-form input[type="search"]:focus { border-color: var(--secondary); }
-
-.search-form button {
-  padding: 10px 20px;
-  background: var(--secondary);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-weight: 600;
-  font-size: .9rem;
-  transition: background .2s;
-}
-
-.search-form button:hover { background: var(--primary); }
-
 /* Hero Section */
 .hero-section {
   margin-top: var(--header-h);
@@ -299,37 +232,6 @@ body.rtl .header-lang { margin-right: 0; margin-left: 12px; }
   opacity: .9;
   margin-bottom: 1.5rem;
 }
-
-.hero-search {
-  display: flex;
-  max-width: 500px;
-  margin: 0 auto;
-  gap: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.hero-search input[type="search"] {
-  flex: 1;
-  padding: 16px 20px;
-  border: none;
-  font-size: 1rem;
-  outline: none;
-}
-
-.hero-search button {
-  padding: 16px 32px;
-  background: var(--secondary);
-  color: #fff;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .2s;
-}
-
-.hero-search button:hover { background: var(--secondary-light); }
 
 /* Main Content */
 .site-content { padding: 40px 0; }
@@ -859,15 +761,6 @@ body.rtl .header-lang { margin-right: 0; margin-left: 12px; }
 
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
-
-  .search-form-header {
-    position: fixed;
-    top: var(--header-h);
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 0;
-  }
 
   .single-post-header h1 { font-size: 1.6rem; }
 }
