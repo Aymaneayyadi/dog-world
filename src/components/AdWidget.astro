@@ -1,0 +1,11 @@
+---
+const { width, height, style, label } = Astro.props;
+const w = width || '728px';
+const h = height || '90px';
+const extraStyle = style || '';
+---
+
+<div class="ad-widget" style={extraStyle}>
+  <span class="ad-label">{label || 'Advertisement'}</span>
+  <div style={`width:${w};max-width:100%;height:${h};background:var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-light);font-size:.85rem;`}>Ad Space</div>
+</div>

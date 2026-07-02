@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import AdWidget from '../components/AdWidget.astro';
+---
+
+<BaseLayout title="About" description="Learn about Dog World">
+  <Fragment slot="header"><Header /></Fragment>
+
+  <div class="page-header">
+    <div class="container">
+      <h1 data-en="About Dog World" data-fr="À propos du Monde du Chien" data-ar="حول عالم الكلاب">About Dog World</h1>
+    </div>
+  </div>
+
+  <div class="content-area no-sidebar">
+    <div class="page-content">
+      <p>Welcome to Dog World — your trusted source for expert dog care advice, breed information, training tips, and product recommendations.</p>
+      <p>Our team of experienced veterinarians, trainers, and dog enthusiasts is dedicated to helping you provide the best possible care for your canine companion.</p>
+      <AdWidget />
+      <p>Whether you're a new dog owner or an experienced handler, you'll find valuable information on health, nutrition, grooming, behavior, and more.</p>
+    </div>
+  </div>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

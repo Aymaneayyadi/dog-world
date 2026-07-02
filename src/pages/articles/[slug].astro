@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdWidget from '../../components/AdWidget.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(a => ({
+    params: { slug: a.slug },
+    props: { article: a },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+const { title, description, date, category, tags, image } = article.data;
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="header"><Header /></Fragment>
+
+  <div class="single-post-header">
+    <div class="container">
+      <div class="post-meta">{date} &middot; <a href={`/category/${category.toLowerCase()}`}>{category}</a></div>
+      <h1>{title}</h1>
+      {description && <p style="color:var(--text-light);font-size:1.05rem;">{description}</p>}
+    </div>
+  </div>
+
+  <div class="content-area">
+    <div class="main-content">
+      <AdWidget />
+      {image && (
+        <div class="post-thumbnail-single">
+          <img src={image} alt={title} />
+        </div>
+      )}
+      <article class="post-content">
+        <Content />
+      </article>
+      <AdWidget />
+      {tags && tags.length > 0 && (
+        <div class="post-tags">
+          {tags.map(tag => <a href={`/tag/${tag.toLowerCase()}`}>{tag}</a>)}
+        </div>
+      )}
+      <AdWidget label="Advertisement" />
+      <div class="author-box">
+        <div class="author-box-avatar">
+          <img src="/img/default-avatar.webp" alt="Author" width="64" height="64" />
+        </div>
+        <div class="author-box-info">
+          <h4>Dog World Editorial</h4>
+          <p>Bringing you the best dog care advice from experienced veterinarians and trainers.</p>
+        </div>
+      </div>
+    </div>
+    <aside class="sidebar">
+      <AdWidget width="300" height="250" />
+    </aside>
+  </div>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
