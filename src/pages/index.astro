@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostCard from '../components/PostCard.astro';
-import AdWidget from '../components/AdWidget.astro';
 import { getCollection } from 'astro:content';
 
 const articles = await getCollection('articles');
@@ -39,12 +38,8 @@ const featured = sorted.slice(0, 6);
           </div>
         )}
       </section>
-      <AdWidget />
-      <AdWidget width="728" height="90" style="margin-top:12px" label="Sponsor" />
     </div>
-    <aside class="sidebar">
-      <AdWidget width="300" height="250" />
-    </aside>
+    <aside class="sidebar"></aside>
   </div>
 
   <Fragment slot="footer"><Footer /></Fragment>

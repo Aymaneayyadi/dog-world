@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import AdWidget from '../../components/AdWidget.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -40,17 +39,14 @@ const formatted = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
 
   <div class="content-area">
     <div class="main-content">
-      <AdWidget />
       <article class="post-content">
         <Content />
       </article>
-      <AdWidget />
       {tags && tags.length > 0 && (
         <div class="post-tags">
           {tags.map(tag => <a href={`/tag/${tag.toLowerCase()}`}>{tag}</a>)}
         </div>
       )}
-      <AdWidget label="Advertisement" />
       <div class="author-box">
         <div class="author-box-avatar">
           <img src="/img/default-avatar.webp" alt="Author" width="64" height="64" />
@@ -61,9 +57,7 @@ const formatted = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
         </div>
       </div>
     </div>
-    <aside class="sidebar">
-      <AdWidget width="300" height="250" />
-    </aside>
+    <aside class="sidebar"></aside>
   </div>
 
   <Fragment slot="footer"><Footer /></Fragment>
