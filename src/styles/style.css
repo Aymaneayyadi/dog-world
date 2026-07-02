@@ -145,7 +145,7 @@ body.rtl .header-lang { margin-right: 0; margin-left: 12px; }
   width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px 24px;
 }
 .post-thumbnail-single img {
-  width: 100%; height: auto; max-height: 480px; object-fit: cover;
+  width: 100%; height: auto; max-height: 320px; object-fit: cover;
   border-radius: var(--radius); display: block;
 }
 .post-content { font-size: 1.05rem; line-height: 1.8; }
