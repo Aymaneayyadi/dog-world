@@ -34,7 +34,7 @@
     if (!window.XLSX) {
       libs.push(loadScript('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'));
     }
-    return Promise.all(libs);
+    await Promise.allSettled(libs);
   }
 
   function loadScript(src) {
@@ -422,8 +422,8 @@
         e.preventDefault();
         this.classList.remove('dragover');
         if (e.dataTransfer.files.length > 0) {
-          currentFile = tool.slug === 'merge-pdf' ? e.dataTransfer.files[0] : e.dataTransfer.files[0];
-          showFileInfo(tool.slug === 'merge-pdf' ? e.dataTransfer.files : e.dataTransfer.files[0], tool);
+          currentFile = e.dataTransfer.files[0];
+          showFileInfo(e.dataTransfer.files[0], tool);
           convertBtn.disabled = false;
         }
       });
@@ -500,7 +500,20 @@
       } catch (err) {
         clearInterval(interval);
         progressContainer.style.display = 'none';
-        progressText.textContent = 'Erreur: ' + err.message;
+        progressText.textContent = '';
+        const errMsg = err.message || 'Erreur inconnue';
+        dropzone.innerHTML = `
+          <span class="material-icons dropzone-icon" style="color:var(--accent)">error</span>
+          <h3>Erreur de conversion</h3>
+          <p>${errMsg}</p>
+          <p style="margin-top:12px;font-size:0.85rem;color:var(--text-muted)">Astuce : certains formats nécessitent des librairies spécifiques. Vérifiez que votre fichier est valide.</p>
+          <button class="btn btn-primary" id="retry-btn" style="margin-top:16px;">Réessayer</button>
+        `;
+        dropzone.style.display = 'block';
+        document.getElementById('retry-btn')?.addEventListener('click', () => {
+          currentFile = null;
+          location.reload();
+        });
         convertBtn.disabled = false;
         convertBtn.innerHTML = '<span class="material-icons">swap_horiz</span> Convertir en ' + (tool.outputExt || 'format choisi');
         isConverting = false;
@@ -541,7 +554,7 @@
     const dropzone = document.getElementById('dropzone');
     if (!info || !name || !size) return;
 
-    if (tool.slug === 'merge-pdf' && FileList.prototype.isPrototypeOf(file)) {
+    if (tool.slug === 'merge-pdf' && file && file.length !== undefined) {
       const files = Array.from(file);
       name.textContent = `${files.length} fichiers sélectionnés`;
       size.textContent = files.map(f => formatSize(f.size)).join(', ');
