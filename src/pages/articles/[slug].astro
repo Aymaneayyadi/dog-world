@@ -16,6 +16,9 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content } = await article.render();
 const { title, description, date, category, tags, image } = article.data;
+const d = new Date(date);
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const formatted = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -23,7 +26,7 @@ const { title, description, date, category, tags, image } = article.data;
 
   <div class="single-post-header">
     <div class="container">
-      <div class="post-meta">{date} &middot; <a href={`/category/${category.toLowerCase()}`}>{category}</a></div>
+      <div class="post-meta">{formatted} &middot; <a href={`/category/${category.toLowerCase()}`}>{category}</a></div>
       <h1>{title}</h1>
       {description && <p style="color:var(--text-light);font-size:1.05rem;">{description}</p>}
     </div>
