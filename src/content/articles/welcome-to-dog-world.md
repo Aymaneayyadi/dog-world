@@ -1,28 +1,42 @@
 ---
 title: Welcome to Dog World
-description: Discover everything you need to know about caring for your canine companion.
-date: 2026-01-15
+description: "Découvrez tout ce qu'il faut savoir pour prendre soin de votre compagnon canin."
+date: 2026-07-02
 category: General
-tags: [dogs, care, welcome]
-image: /img/dog-hero.webp
+tags: [dogs, care, welcome, guide]
+image: /img/welcome-banner.svg
 ---
 
-Welcome to Dog World! We are dedicated to providing the best information for dog lovers everywhere.
+Bienvenue sur Dog World — votre source de confiance pour tout ce qui concerne le bien-être de votre chien.
 
-## What You'll Find Here
+Que vous soyez un nouveau propriétaire ou un maître expérimenté, notre mission est de vous offrir des conseils clairs, fiables et utiles au quotidien.
 
-From health tips to training advice, we cover all aspects of dog care.
+## Ce que vous trouverez ici
 
-### Health
+### Santé
 
-Learn about common health issues, preventative care, and nutrition.
+Des articles sur les soins vétérinaires, les maladies courantes, les vaccins et la prévention pour garder votre chien en pleine forme.
 
-### Training
+### Nutrition
 
-Discover effective training techniques for dogs of all ages.
+Des guides sur l'alimentation : croquettes, pâtée, rations ménagères, compléments et aliments interdits.
 
-### Breeds
+### Éducation et dressage
 
-Explore different dog breeds and find the perfect match for your lifestyle.
+Des techniques positives pour apprendre la propreté, l'obéissance de base, la socialisation et corriger les comportements indésirables.
 
-Stay tuned for more articles coming soon!
+### Races
+
+Des portraits détaillés pour vous aider à choisir la race qui correspond à votre mode de vie.
+
+### Toilettage
+
+Des conseils pratiques pour le bain, le brossage, les soins des oreilles, des yeux et des griffes.
+
+### Comportement
+
+Comprenez le langage corporel de votre chien, ses émotions et ses besoins.
+
+## Un article chaque jour
+
+Nous publions un nouvel article chaque jour pour vous accompagner dans votre aventure canine. Restez connectés !

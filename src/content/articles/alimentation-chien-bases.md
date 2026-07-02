@@ -1,6 +1,6 @@
 ---
-title: Les bases de l'alimentation canine
-description: Tout ce qu'il faut savoir pour nourrir son chien correctement : quantités, fréquence, aliments recommandés et interdits.
+title: "Les bases de l'alimentation canine"
+description: "Tout ce qu'il faut savoir pour nourrir son chien correctement : quantités, fréquence, aliments recommandés et interdits."
 date: 2026-07-01
 category: Nutrition
 tags: [alimentation, nutrition, croquettes, santé]
