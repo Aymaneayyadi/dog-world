@@ -4,6 +4,7 @@ description: "Tout ce qu'il faut savoir pour nourrir son chien correctement : qu
 date: 2026-07-01
 category: Nutrition
 tags: [alimentation, nutrition, croquettes, santé]
+image: /img/nutrition-banner.jpg
 ---
 
 Bien nourrir son chien est l'un des piliers d'une vie longue et en bonne santé. Une alimentation équilibrée apporte l'énergie nécessaire à son activité quotidienne et renforce son système immunitaire.
