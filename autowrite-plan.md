@@ -13,7 +13,7 @@
 | 1 | Jul 1 | Les bases de l'alimentation canine | Nutrition | ✅ |
 | 2 | Jul 2 | Welcome to Dog World | General | ✅ |
 | 3 | Jul 3 | Comment choisir la bonne race de chien | Breeds | ✅ |
-| 4 | Jul 4 | Guide complet du toilettage à la maison | Grooming | 🔲 |
+| 4 | Jul 4 | Guide complet du toilettage à la maison | Grooming | ✅ |
 | 5 | Jul 5 | Comprendre le langage corporel de votre chien | Behavior | 🔲 |
 | 6 | Jul 6 | Les soins vétérinaires préventifs essentiels | Health | 🔲 |
 | 7 | Jul 7 | Les meilleurs jouets pour chiens en 2026 | Products | 🔲 |
