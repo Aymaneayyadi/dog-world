@@ -166,6 +166,37 @@ ul, ol { margin: 0 0 1rem 1.5rem; }
 
 .menu-toggle svg { width: 28px; height: 28px; }
 
+/* Language Switcher */
+.header-lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 12px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: .75rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all .2s;
+  line-height: 1;
+}
+
+.lang-btn:hover { color: var(--secondary); border-color: var(--secondary); }
+
+.lang-btn.active {
+  background: var(--secondary);
+  color: #fff;
+  border-color: var(--secondary);
+}
+
+body.rtl .header-lang { margin-right: 0; margin-left: 12px; }
+
 /* Search */
 .header-search {
   display: flex;

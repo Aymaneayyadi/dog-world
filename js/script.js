@@ -66,4 +66,31 @@
       }
     });
   });
+
+  // Language Switcher
+  var langs = ['en', 'fr', 'ar'];
+  var savedLang = localStorage.getItem('dogworld_lang') || 'en';
+
+  function setLang(lang) {
+    localStorage.setItem('dogworld_lang', lang);
+    document.documentElement.lang = lang === 'ar' ? 'ar' : lang;
+    document.body.classList.toggle('rtl', lang === 'ar');
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+    });
+    document.querySelectorAll('[data-en-placeholder]').forEach(function (el) {
+      el.placeholder = el.getAttribute('data-' + lang + '-placeholder') || el.placeholder;
+    });
+  }
+
+  setLang(savedLang);
+
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setLang(this.getAttribute('data-lang'));
+    });
+  });
 })();
