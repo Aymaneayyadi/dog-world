@@ -32,14 +32,15 @@ const formatted = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
     </div>
   </div>
 
+  {image && (
+    <div class="post-thumbnail-single">
+      <img src={image} alt={title} />
+    </div>
+  )}
+
   <div class="content-area">
     <div class="main-content">
       <AdWidget />
-      {image && (
-        <div class="post-thumbnail-single">
-          <img src={image} alt={title} />
-        </div>
-      )}
       <article class="post-content">
         <Content />
       </article>
