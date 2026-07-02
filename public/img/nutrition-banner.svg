@@ -6,21 +6,48 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg2)"/>
-  <circle cx="300" cy="150" r="200" fill="#40916C" opacity="0.15"/>
-  <circle cx="900" cy="500" r="180" fill="#E8883A" opacity="0.1"/>
-  <g transform="translate(600, 260)">
-    <ellipse cx="0" cy="50" rx="90" ry="50" fill="#1B4332" opacity="0.3"/>
-    <ellipse cx="-30" cy="30" rx="50" ry="40" fill="#fff" opacity="0.9"/>
-    <ellipse cx="30" cy="30" rx="50" ry="40" fill="#fff" opacity="0.9"/>
-    <circle cx="-15" cy="35" r="10" fill="#E8883A"/>
-    <circle cx="15" cy="35" r="10" fill="#E8883A"/>
-    <circle cx="-15" cy="35" r="10" fill="#FFF" opacity="0.5"/>
-    <circle cx="15" cy="35" r="10" fill="#FFF" opacity="0.5"/>
-    <ellipse cx="0" cy="55" rx="40" ry="12" fill="#2D6A4F"/>
-    <ellipse cx="0" cy="50" rx="30" ry="8" fill="#fff" opacity="0.3"/>
-    <path d="M-55 20 Q-70 0 -45 -10" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M55 20 Q70 0 45 -10" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="200" cy="500" r="260" fill="#40916C" opacity="0.12"/>
+  <circle cx="1000" cy="150" r="200" fill="#E8883A" opacity="0.08"/>
+  <!-- Dog assis a cote des gamelles -->
+  <g transform="translate(320, 300)">
+    <ellipse cx="0" cy="80" rx="75" ry="50" fill="#B68973"/>
+    <ellipse cx="-15" cy="70" rx="20" ry="18" fill="#A07860"/>
+    <ellipse cx="15" cy="70" rx="20" ry="18" fill="#A07860"/>
+    <ellipse cx="0" cy="-40" rx="38" ry="35" fill="#B68973"/>
+    <ellipse cx="-12" cy="-45" rx="20" ry="18" fill="#A07860"/>
+    <ellipse cx="12" cy="-45" rx="20" ry="18" fill="#A07860"/>
+    <circle cx="-12" cy="-45" r="7" fill="#1B4332"/>
+    <circle cx="12" cy="-45" r="7" fill="#1B4332"/>
+    <ellipse cx="0" cy="-35" rx="6" ry="4" fill="#1B4332"/>
+    <path d="M-8 -32 Q0 -22 8 -32" stroke="#1B4332" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M-45 -60 Q-60 -70 -50 -80" stroke="#E8883A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M45 -60 Q60 -70 50 -80" stroke="#E8883A" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <g transform="rotate(-25, -70, -30)"><ellipse cx="-70" cy="-30" rx="35" ry="15" fill="#B68973"/></g>
+    <g transform="rotate(25, 70, -30)"><ellipse cx="70" cy="-30" rx="35" ry="15" fill="#B68973"/></g>
   </g>
-  <text x="600" y="430" font-family="Segoe UI, sans-serif" font-size="44" font-weight="bold" fill="#fff" text-anchor="middle" letter-spacing="1">Les bases de l'alimentation</text>
-  <text x="600" y="475" font-family="Segoe UI, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">Bien nourrir son chien pour une vie saine</text>
+  <!-- Gamelles -->
+  <g transform="translate(650, 300)">
+    <ellipse cx="0" cy="20" rx="65" ry="15" fill="#E8883A" opacity="0.3"/>
+    <ellipse cx="0" cy="0" rx="65" ry="25" fill="#E8883A"/>
+    <ellipse cx="0" cy="-5" rx="55" ry="20" fill="#F4A261"/>
+    <ellipse cx="-5" cy="-8" rx="30" ry="12" fill="#8B4513" opacity="0.6"/>
+    <ellipse cx="-5" cy="-10" rx="25" ry="9" fill="#A0522D" opacity="0.5"/>
+    <circle cx="5" cy="-5" r="4" fill="#E8883A"/>
+    <circle cx="-15" cy="-8" r="3" fill="#E8883A"/>
+    <circle cx="15" cy="-12" r="5" fill="#E8883A"/>
+  </g>
+  <!-- Gamelle eau -->
+  <g transform="translate(650, 380)">
+    <ellipse cx="0" cy="0" rx="55" ry="20" fill="#40916C"/>
+    <ellipse cx="0" cy="-3" rx="48" ry="16" fill="#52B788"/>
+    <ellipse cx="0" cy="-5" rx="38" ry="10" fill="#95D5B2" opacity="0.6"/>
+  </g>
+  <!-- Elements nutrition -->
+  <g transform="translate(850, 200)"><circle r="45" fill="rgba(255,255,255,0.1)"/><text x="0" y="8" text-anchor="middle" font-size="32">🥩</text></g>
+  <g transform="translate(950, 320)"><circle r="45" fill="rgba(255,255,255,0.08)"/><text x="0" y="8" text-anchor="middle" font-size="32">🥦</text></g>
+  <g transform="translate(850, 440)"><circle r="45" fill="rgba(255,255,255,0.08)"/><text x="0" y="8" text-anchor="middle" font-size="32">🐟</text></g>
+  <!-- Texte -->
+  <rect x="280" y="500" width="640" height="70" rx="12" fill="rgba(0,0,0,0.35)"/>
+  <text x="600" y="530" font-family="Segoe UI, sans-serif" font-size="38" font-weight="bold" fill="#fff" text-anchor="middle" letter-spacing="1">Les bases de l'alimentation canine</text>
+  <text x="600" y="565" font-family="Segoe UI, sans-serif" font-size="17" fill="rgba(255,255,255,0.85)" text-anchor="middle">Bien nourrir son chien pour une vie saine et heureuse</text>
 </svg>
