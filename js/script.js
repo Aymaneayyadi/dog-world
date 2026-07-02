@@ -7,14 +7,12 @@
   var searchToggle = document.querySelector('.search-toggle');
   var searchForm = document.querySelector('.search-form-header');
 
-  // Sticky header shadow on scroll
   if (header) {
     window.addEventListener('scroll', function () {
       header.classList.toggle('scrolled', window.scrollY > 10);
     });
   }
 
-  // Mobile menu toggle
   if (menuToggle && primaryMenu) {
     menuToggle.addEventListener('click', function () {
       var expanded = menuToggle.getAttribute('aria-expanded') === 'true' ? false : true;
@@ -22,7 +20,6 @@
       primaryMenu.classList.toggle('active');
     });
 
-    // Close menu on link click
     primaryMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         primaryMenu.classList.remove('active');
@@ -31,7 +28,6 @@
     });
   }
 
-  // Submenu toggle on mobile
   document.querySelectorAll('.main-navigation .menu-item-has-children > a').forEach(function (item) {
     item.addEventListener('click', function (e) {
       if (window.innerWidth <= 767) {
@@ -44,7 +40,6 @@
     });
   });
 
-  // Search toggle
   if (searchToggle && searchForm) {
     searchToggle.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -62,7 +57,6 @@
     });
   }
 
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));

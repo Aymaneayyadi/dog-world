@@ -867,21 +867,3 @@ ul, ol { margin: 0 0 1rem 1.5rem; }
 }
 
 .skip-link:focus { top: 0; }
-
-/* RTL Support */
-body.rtl { direction: rtl; text-align: right; }
-body.rtl ul, body.rtl ol { margin: 0 1.5rem 1rem 0; }
-body.rtl .header-inner { flex-direction: row-reverse; }
-body.rtl .hero-search { flex-direction: row-reverse; }
-body.rtl .post-card-cat { left: auto; right: 12px; }
-body.rtl .search-form-header { right: auto; left: 0; }
-body.rtl .main-navigation .sub-menu { left: auto; right: 0; }
-body.rtl .footer-bottom-inner { flex-direction: row-reverse; }
-body.rtl .post-content blockquote { border-left: none; border-right: 4px solid var(--secondary); border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
-body.rtl .breadcrumbs .separator { display: inline-block; }
-body.rtl .section-title { border-bottom: none; border-right: 3px solid var(--secondary); padding: 0 0 .5rem .5rem; }
-body.rtl .widget-title { border-bottom: none; border-right: 2px solid var(--secondary); padding: 0 0 .5rem .5rem; }
-@media (max-width: 767px) {
-  body.rtl .search-form-header { left: 0; right: 0; }
-  body.rtl .main-navigation .sub-menu { padding-left: 0; padding-right: 16px; }
-}
