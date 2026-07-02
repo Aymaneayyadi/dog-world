@@ -4,7 +4,7 @@ description: "Découvrez tout ce qu'il faut savoir pour prendre soin de votre co
 date: 2026-07-02
 category: General
 tags: [dogs, care, welcome, guide]
-image: /img/welcome-banner.svg
+image: /img/welcome-banner.jpg
 ---
 
 Bienvenue sur Dog World — votre source de confiance pour tout ce qui concerne le bien-être de votre chien.
