@@ -57,7 +57,7 @@ const ConvertMaster = {
   },
 
   async pdfToWord(file) {
-    const { data } = await this.readFile(file, 'arraybuffer');
+    const data = await this.readFile(file, 'arraybuffer');
     const pdfjsLib = window.pdfjsLib;
     const doc = await pdfjsLib.getDocument({ data }).promise;
     let text = '';
@@ -83,7 +83,7 @@ const ConvertMaster = {
   },
 
   async pdfToExcel(file) {
-    const { data } = await this.readFile(file, 'arraybuffer');
+    const data = await this.readFile(file, 'arraybuffer');
     const pdfjsLib = window.pdfjsLib;
     const doc = await pdfjsLib.getDocument({ data }).promise;
     let rows = [['Page', 'Contenu']];
