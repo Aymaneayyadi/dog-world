@@ -6,6 +6,9 @@
   let isDark = localStorage.getItem('cm-dark') === 'true';
 
   function init() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
     loadLibraries().then(() => {
       setupNavigation();
       setupSearch();
