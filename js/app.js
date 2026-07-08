@@ -492,6 +492,7 @@
         resultBlob = result.blob;
         resultName = result.name;
 
+        if (fileInput) fileInput.value = '';
         setTimeout(() => {
           progressContainer.style.display = 'none';
           downloadSection.style.display = 'block';
@@ -501,6 +502,9 @@
         clearInterval(interval);
         progressContainer.style.display = 'none';
         progressText.textContent = '';
+        if (fileInfo) fileInfo.style.display = 'none';
+        currentFile = null;
+        if (fileInput) fileInput.value = '';
         const errMsg = err.message || 'Erreur inconnue';
         dropzone.innerHTML = `
           <span class="material-icons dropzone-icon" style="color:var(--accent)">error</span>
@@ -511,11 +515,11 @@
         `;
         dropzone.style.display = 'block';
         document.getElementById('retry-btn')?.addEventListener('click', () => {
-          currentFile = null;
           location.reload();
         });
         convertBtn.disabled = false;
         convertBtn.innerHTML = '<span class="material-icons">swap_horiz</span> Convertir en ' + (tool.outputExt || 'format choisi');
+      } finally {
         isConverting = false;
       }
     });
